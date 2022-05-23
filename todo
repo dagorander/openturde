@@ -34,5 +34,9 @@ Figure out how to change the PS1 in ksh
 Probably install zsh and/or fish as well
 
 
+TOOLS
+get ueberzug working - install with pip? For ranger image previews
+
+
 GIT WORK
 Figure out if there's anything more than .0 that should be added to gitignore
