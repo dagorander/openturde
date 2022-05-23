@@ -1,0 +1,38 @@
+THERMALS AND PERFORMANCE
+Find a way to detect thermals
+Somehow use this for nuanced power management
+
+
+POWER USAGE
+Find a way to detect current power usage
+
+
+AUDIO
+Implement audio controls
+--- Example commands to use:
+---
+---
+--- Bonus ponints if using media keys
+
+
+SCREEN
+Implement screen brightness controls
+--- For bonus points, make that work using the media keys
+--- Example commands:   xbacklight -set 10%
+                        xbacklight -inc 10%
+                        xbacklight -dec 10%
+--- Should have a default low setting set somewhere - probably
+    when loading xenodm?
+
+
+TOUCHPAD
+Figure out why I can't right-click?
+
+
+TERMINALS
+Figure out how to change the PS1 in ksh
+Probably install zsh and/or fish as well
+
+
+GIT WORK
+Figure out if there's anything more than .0 that should be added to gitignore

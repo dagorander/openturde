@@ -1,0 +1,10 @@
+UNTARING FILES
+tar -xzvf $FILENAME
+      x = extract
+      z = using gzip
+      v = verbose
+      f = filename follows
+
+PATCHING SOURCE
+patch -p1 < name-of-diff
+Then if things go wrong, manually apply the *.rej.*
