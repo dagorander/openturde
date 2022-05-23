@@ -5,6 +5,7 @@ Somehow use this for nuanced power management
 
 POWER USAGE
 Find a way to detect current power usage
+Figure out details on how to manipulate power states
 
 
 AUDIO
@@ -38,5 +39,10 @@ TOOLS
 get ueberzug working - install with pip? For ranger image previews
 
 
+INSTALLER
+Arrange some way to quickly copy over:
+--- xenodm config
+
+
 GIT WORK
-Figure out if there's anything more than .0 that should be added to gitignore
+Figure out if there's anything more than .o that should be added to gitignore
