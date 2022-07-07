@@ -1,0 +1,31 @@
+### BASICS
+
+DWM: rebuild from scratch
+ST: rebuild from scratch
+DMENU: check if should rebuild from scratch
+DWM: think hard about a sane keyboard shortcut setup
+
+
+### USEABILITY
+
+
+DWM: Set up screen brightness controls (see awesome?)
+DWM: Set up volume controls (see awesome?)
+DWM: Cull unwanted layouts
+DWM: Add clock to "bar"
+DWM: Add battery status to "bar"
+DWM: Add battery life expectancy to "bar"
+DWM: Add "charging or not" to "bar"
+DWM: Cull unwanted layouts
+ST: Figure out how to make scrolling work - preferably including "mouse scroll" with touchpad
+DWM: Get sticky tags set up - make it possible to make windows show on all tags temporarily
+DWM: Set up a scratchpad terminal command - floating, middleish, should survive hiding
+
+
+### PURDINESS
+
+ST: Patch to not leave excess space at the edges that don't fit the space
+XSESSION: Use feh to set a wallpaper
+DWM: Add gaps - but only if there's more than one window
+ST: Set up Alpha patch
+ST: See if ranger previews works with w3m - only without alpha patch?
