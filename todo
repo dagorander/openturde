@@ -26,17 +26,14 @@ Implement screen brightness controls
     when loading xenodm?
 
 
-TOUCHPAD
-Figure out why I can't right-click?
-
-
 TERMINALS
 Figure out how to change the PS1 in ksh
 Probably install zsh and/or fish as well
 
 
 TOOLS
-get ueberzug working - install with pip? For ranger image previews
+get ueberzug working - install with pip? - or other image previes system. For ranger image previews
+
 
 
 INSTALLER
