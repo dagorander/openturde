@@ -5,8 +5,6 @@ DWM: think hard about a sane keyboard shortcut setup
 
 ### USEABILITY
 
-DWM: Set up screen brightness controls (see awesome?)
-DWM: Set up volume controls (see awesome?)
 DWM: Cull unwanted layouts
 DWM: Add clock to "bar"
 DWM: Add battery status to "bar"
@@ -28,3 +26,8 @@ ST: See if ranger previews works with w3m - only without alpha patch?
 ### EXPANSIONS
 
 DWM: Add more layouts
+
+
+### BUGFIXES
+
+SXHKD: Why are the monitor brightness keys not registering - not even in xev
