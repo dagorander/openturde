@@ -1,3 +1,7 @@
+
+TODO: Fix the fact that slstatus isn't properly stored in the repo. :(
+
+
 ### BASICS
 
 DWM: think hard about a sane keyboard shortcut setup
@@ -5,13 +9,7 @@ DWM: think hard about a sane keyboard shortcut setup
 
 ### USEABILITY
 
-DWM: Set up screen brightness controls (see awesome?)
-DWM: Set up volume controls (see awesome?)
 DWM: Cull unwanted layouts
-DWM: Add clock to "bar"
-DWM: Add battery status to "bar"
-DWM: Add battery life expectancy to "bar"
-DWM: Add "charging or not" to "bar"
 ST: Figure out how to make scrolling work - preferably including "mouse scroll" with touchpad
 DWM: Get sticky tags set up - make it possible to make windows show on all tags temporarily
 DWM: Set up a scratchpad terminal command - floating, middleish, should survive hiding
@@ -23,8 +21,15 @@ XSESSION: Use feh to set a wallpaper
 DWM: Add gaps - but only if there's more than one window
 ST: Set up Alpha patch
 ST: See if ranger previews works with w3m - only without alpha patch?
-
+DWM: Patch for spacing over and under letters and such
 
 ### EXPANSIONS
 
 DWM: Add more layouts
+SLSTATUS: Figure out more about what can be done with it, like colors etc
+
+
+### BUGFIXES
+
+SXHKD: Why are the monitor brightness keys not registering - not even in xev
+RANGER: Understand what is needed to get image previews working - w3m is nope?

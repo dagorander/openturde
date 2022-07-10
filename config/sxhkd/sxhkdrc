@@ -1,0 +1,36 @@
+#####
+# APPLICATIONS
+#
+
+# super + d
+#	rofi -modi drun -show drun -show-icons
+
+# Print
+#	scrot '%Y-%m-%d_%H:%M:%S.png' -e 'mv $f ~/Pictures/Screenshots/'
+#
+
+#####
+# AUDIO
+#
+XF86AudioRaiseVolume
+	sndioctl output.level=+0.1 &
+
+XF86AudioLowerVolume
+	sndioctl output.level=-0.1 &
+
+#XF86AudioMute
+#        amixer -q -D pulse sset Master toggle
+
+#####
+# BACKLIGHT
+#
+
+#XF86MonBrightnessUp
+super + bracketright
+	xbacklight -inc 10 &
+
+#XF86MonBrightnessDown
+super + bracketleft
+	xbacklight -dec 10 &
+
+
