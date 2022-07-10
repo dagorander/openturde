@@ -21,7 +21,7 @@ XSESSION: Use feh to set a wallpaper
 DWM: Add gaps - but only if there's more than one window
 ST: Set up Alpha patch
 ST: See if ranger previews works with w3m - only without alpha patch?
-
+DWM: Patch for spacing over and under letters and such
 
 ### EXPANSIONS
 
