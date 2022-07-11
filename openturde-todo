@@ -14,22 +14,23 @@ DWM: Set up a scratchpad terminal command - floating, middleish, should survive 
 
 ### PURDINESS
 
-XSESSION: Use feh to set a wallpaper
 DWM: Add gaps - but only if there's more than one window
 ST: Set up Alpha patch
-ST: See if ranger previews works with w3m - only without alpha patch?
-ST: Set up Nord for the terminal
-NVIM: Does it just use terminal colours or does this need nord as well?
 DWM: Patch for spacing over and under letters and such
 DWM: Look into better/alternative fonts
+
 
 ### EXPANSIONS
 
 DWM: Add more layouts
-SLSTATUS: Figure out more about what can be done with it, like colors etc
 
 
 ### LOW-PRIO BUGFIXES
 
 SXHKD: Why are the monitor brightness keys not registering - not even in xev
 RANGER: Understand what is needed to get image previews working - w3m is nope?
+
+
+### DEPRIORITISIED
+
+RANGER: Figure out how to get image previews

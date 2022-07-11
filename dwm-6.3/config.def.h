@@ -5,17 +5,45 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[]          = { "monospace:size=8" };
+static const char dmenufont[]       = "monospace:size=8";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
+
+/* base nord colours */
+static const char nord0[]		= "#2e3440"; // Near black grey
+static const char nord1[]		= "#3b4252"; // Very dark grey
+static const char nord2[]		= "#424c5e"; // Dark grey
+static const char nord3[]		= "#4c566a"; // Less dark grey
+/* snow storm whites */
+static const char nord4[]		= "#d8dee9"; // Light grey
+static const char nord5[]		= "#e5e9f0"; // Whiter
+static const char nord6[]		= "#eceff4"; // Whitest
+/* frost colour tones */
+static const char nord7[]		= "#8fbcbb"; // Greenish blue
+static const char nord8[]		= "#88c0d0"; // Baby blue
+static const char nord9[]		= "#81a1c1"; // mid blue
+static const char nord10[]		= "#5e81ac"; // Dark blue
+/* aurora stronger colours */
+static const char nord11[]		= "#bf616a"; // Red
+static const char nord12[]		= "#d08770"; // Orange
+static const char nord13[]		= "#ebcb8b"; // Yellow
+static const char nord14[]		= "#a3be8c"; // Green
+static const char nord15[]		= "#b48ead"; // Purplish
+
+
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
+	[SchemeNorm] = { nord4, nord0, nord7 },
+	[SchemeSel] = { nord4, nord3, nord8 },
+
+	/* defaults
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
 	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	*/
 };
 
 /* tagging */
@@ -60,11 +88,6 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
-static const char *volumedown[] = { "sndioctl", "output.level=-0.05" };
-static const char *volumeup[] = { "sndioctl", "output.level=+0.05" };
-static const char *brightnessdown[] = { "xbacklight", "-dec", "10" };
-static const char *brightnessup[] = { "xbacklight", "-inc", "10" };
-
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
@@ -90,10 +113,6 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY,			XK_semicolon,	   spawn,	   {.v = volumedown } },
-	{ MODKEY,			XK_apostrophe,	   spawn,	   {.v = volumeup } },
-	{ MODKEY,			XK_bracketleft,	   spawn,	   {.v = brightnessdown } },
-	{ MODKEY,			XK_bracketright,   spawn,	   {.v = brightnessup } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
