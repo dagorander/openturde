@@ -12,10 +12,38 @@ static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
+
+/* base nord colours */
+static const char nord0[]		= "#2e3440"; // Near black grey
+static const char nord1[]		= "#3b4252"; // Very dark grey
+static const char nord2[]		= "#424c5e"; // Dark grey
+static const char nord3[]		= "#4c566a"; // Less dark grey
+/* snow storm whites */
+static const char nord4[]		= "#d8dee9"; // Light grey
+static const char nord5[]		= "#e5e9f0"; // Whiter
+static const char nord6[]		= "#eceff4"; // Whitest
+/* frost colour tones */
+static const char nord7[]		= "#8fbcbb"; // Greenish blue
+static const char nord8[]		= "#88c0d0"; // Baby blue
+static const char nord9[]		= "#81a1c1"; // mid blue
+static const char nord10[]		= "#5e81ac"; // Dark blue
+/* aurora stronger colours */
+static const char nord11[]		= "#bf616a"; // Red
+static const char nord12[]		= "#d08770"; // Orange
+static const char nord13[]		= "#ebcb8b"; // Yellow
+static const char nord14[]		= "#a3be8c"; // Green
+static const char nord15[]		= "#b48ead"; // Purplish
+
+
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
+	[SchemeNorm] = { nord4, nord0, nord7 },
+	[SchemeSel] = { nord4, nord3, nord8 },
+
+	/* defaults
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
 	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	*/
 };
 
 /* tagging */
