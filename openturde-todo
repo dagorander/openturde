@@ -15,9 +15,9 @@ DWM: Set up a scratchpad terminal command - floating, middleish, should survive 
 ### PURDINESS
 
 DWM: Add gaps - but only if there's more than one window
-ST: Set up Alpha patch
 DWM: Patch for spacing over and under letters and such
 DWM: Look into better/alternative fonts
+DMENU: Sort out nord theme for dmenu as well
 
 
 ### EXPANSIONS
