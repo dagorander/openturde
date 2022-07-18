@@ -10,6 +10,7 @@ DWM: Cull unwanted layouts
 ST: Figure out how to make scrolling work - preferably including "mouse scroll" with touchpad
 DWM: Get sticky tags set up - make it possible to make windows show on all tags temporarily
 DWM: Set up a scratchpad terminal command - floating, middleish, should survive hiding
+ST: Make files and directories look different in ls command
 
 
 ### PURDINESS
@@ -20,7 +21,8 @@ DWM: Patch for spacing over and under letters and such:
 DWM: Look into better/alternative fonts
 ST: Look into better/alternative fonts
 DMENU: Sort out nord theme for dmenu as well
-ST: Make files and directories look different in ls command
+DWM: Pick a different border colour
+
 
 ### EXPANSIONS
 
@@ -31,11 +33,13 @@ DWM: Add more layouts
 
 SXHKD: Why are the monitor brightness keys not registering - not even in xev
 RANGER: Understand what is needed to get image previews working - w3m is nope?
+DWM: Understand why there are build warnings about negative unsigned values
 
 
 ### DEPRIORITISIED
 
 RANGER: Figure out how to get image previews
+OpenBSD: How to get zzz and ZZZ working?
 
 
 ### UNIMPORTANT NOTES

@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 8;        /* border pixel of windows */
+static const unsigned int borderpx  = 6;        /* border pixel of windows */
 static const unsigned int gappx     = 16;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
@@ -38,8 +38,8 @@ static const char nord15[]		= "#b48ead"; // Purplish
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { nord4, nord0, nord7 },
-	[SchemeSel] = { nord4, nord3, nord8 },
+	[SchemeNorm] = { nord4, nord0, nord10 },
+	[SchemeSel] = { nord4, nord3, nord7 },
 
 	/* defaults
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
