@@ -20,8 +20,10 @@ DWM: Patch for spacing over and under letters and such:
 	https://dwm.suckless.org/patches/barpadding/
 DWM: Look into better/alternative fonts
 ST: Look into better/alternative fonts
-DMENU: Sort out nord theme for dmenu as well
 DWM: Pick a different border colour
+XENODM: Set a background - does that conflict with Background for DWM?
+XENODM: Apply Nord theme colours to login dialogue
+XENODM: Find Nord style puffy-fish image
 
 
 ### EXPANSIONS

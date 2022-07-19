@@ -2,7 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 4;        /* border pixel of windows */
-static const unsigned int gappx     = 12;        /* gaps between windows */
+static const unsigned int gappx     = 16;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -34,12 +34,13 @@ static const char nord12[]		= "#d08770"; // Orange
 static const char nord13[]		= "#ebcb8b"; // Yellow
 static const char nord14[]		= "#a3be8c"; // Green
 static const char nord15[]		= "#b48ead"; // Purplish
-
+/* silly colours for testing */
+static const char blacktest[]		= "#3b4252"; // Black in st
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { nord4, nord0, nord7 },
-	[SchemeSel] = { nord4, nord3, nord8 },
+	[SchemeNorm] = { nord4, nord0, nord0 },
+	[SchemeSel] = { nord4, nord3, nord12 },
 
 	/* defaults
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -86,7 +87,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", nord0, "-nf", nord4, "-sb", nord3, "-sf", nord4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 static Key keys[] = {
