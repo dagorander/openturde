@@ -6,10 +6,10 @@ DWM: think hard about a sane keyboard shortcut setup
 
 ### USEABILITY
 
-DWM: Cull unwanted layouts
+DWM: Check for any more layouts that should be added
 ST: Figure out how to make scrolling work 
 	preferably including "mouse scroll" with touchpad
-	See the "scroll" binary from suckless then set in st config.h?
+	See this: https://st.suckless.org/patches/scrollback/
 DWM: Get sticky tags set up - make it possible to make windows show on all tags temporarily
 DWM: Set up a scratchpad terminal command - floating, middleish, should survive hiding
 ST: Make files and directories look different in ls command
