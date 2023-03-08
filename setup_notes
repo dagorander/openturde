@@ -1,0 +1,42 @@
+Must activate doas first.
+Just copy example file from /etc/examples to /etc
+Set up networking:
+ifconfig to find devices
+to restart networking: # sh /etc/netstart
+find hostname.xxxx files in /etc to config
+see man iwx.4 for details on hostname file content.
+Add git to be able to do things
+clone openturde and run all the makes
+install sxhkd picom and feh
+install ranger
+grabbing Turde for the wallpapers
+Should update to default wallpaper that exists and add to OpenTurde
+Remove Xconsole from xenodm config.
+comment out xconsole genometry line in /etc/X11/xenodm/Xsetup_0?
+we need to get the appropriate font that ST expects
+fantasuqsansmono-nerd-fonts is in repos
+need also normal fantasque-sans, figure out how to switch to nerd later
+Install neovim and start on that
+Install neofetch and maybe fastfetch
+install htop, got screenfetch since fastfetch was not in repos
+let's activate hyperthreading
+rust might be just... pkg_add rust
+install package 'node'
+install yarn for lvim purposes
+add curl because needs it
+Actually curl was already there.
+Copy /etc/examples/sysctl.conf to /etc and set hw.smt=1 to enable hyperthreading
+then install helix
+now it is time to get a persistent version of the openturde git repo
+Time to change the PS1 to something useful
+maybe this for prompt: https://www.reddit.com/r/openbsd/comments/7k3lh2/comment/drbfkpu/
+basically, also needs to export ENV=/home/daniel/.kshrc in .profile?
+That didn't seem to work?
+. /etc/ksh.kshrc in .kshrc maybe to invoke the main one
+nope
+Testing: https://nanxiao.me/en/customize-ksh-display-for-openbsd/
+nope
+Trying this: https://www.reddit.com/r/openbsd/comments/wlyxw1/need_help_with_kshrc/
+That worked!
+Then to see what parts actually matter, but fine.
+LunarVim install still no go, guess learning Helix?
