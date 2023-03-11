@@ -40,3 +40,11 @@ Trying this: https://www.reddit.com/r/openbsd/comments/wlyxw1/need_help_with_ksh
 That worked!
 Then to see what parts actually matter, but fine.
 LunarVim install still no go, guess learning Helix?
+Updated some things for hx in config
+Switched dwm to use alacritty as terminal
+for clangd language server, isntall clang-tools-extra
+And then it just works
+Find other language servers through hx --health
+apmd might not be enabled by default! https://www.reddit.com/r/openbsd/comments/97bdog/apm_actions_dont_happen/
+so doas rcctl enable apmd?
+That seems to have made it go to auto at least. :D
