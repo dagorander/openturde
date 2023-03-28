@@ -48,3 +48,13 @@ Find other language servers through hx --health
 apmd might not be enabled by default! https://www.reddit.com/r/openbsd/comments/97bdog/apm_actions_dont_happen/
 so doas rcctl enable apmd?
 That seems to have made it go to auto at least. :D
+switched editor to hx in ranger's rifle.conf
+Mod Xenodm: https://www.tumfatig.net/2019/customizing-openbsd-xenodm/
+That all lives in /etc/X11/xenodm/Xsetup_0
+Remember to copy that file to repo
+Installing Terminus because why not?
+See: https://romanzolotarev.com/openbsd/xenodm.html
+Was one more file, /etc/X11/xenodm/Xresources
+Be very careful with that Xresources file... :D
+installed bash language server with npm
+not sure if it does anything though... doesn't seem to do much

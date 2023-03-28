@@ -65,13 +65,17 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ separator,		" ",		NULL },
-	{ wifi_perc,		"WiFi %s%%",	"iwx0" },
-	{ separator,		" | ",		NULL },
-	{ separator, 		"BAT", 		NULL },
-	{ battery_state, 	"%s", 		NULL },
-	{ battery_perc, 	"%s%% ", 	NULL },
-	{ battery_remaining,	"%s", 		NULL },
-	{ separator, 		" | ", 		NULL },
-	{ datetime, 		"%s ",           "%F %T" },
+	{ separator,					" ",									NULL },
+	{ temp,								"CPU %s°C", 					NULL },
+	{ cpu_freq, 					" %shz ",							NULL },
+	// { cpu_perc,					" %s%% ",								NULL },
+	{ separator,					"| ",									NULL },
+	{ wifi_perc,					"WiFi %s%%",	"iwx0" 			 },
+	{ separator,					" | ",								NULL },
+	{ separator, 					"BAT ", 							NULL },
+	{ battery_state, 			"%s", 								NULL },
+	{ battery_perc, 			"%s%% ", 							NULL },
+	{ battery_remaining,	"%s", 								NULL },
+	{ separator, 					" | ", 								NULL },
+	{ datetime, 					"%s ",             "%F %T" },
 };

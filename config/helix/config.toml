@@ -1,1 +1,10 @@
 theme = "nord_transparent"
+
+[editor]
+line-number = "relative"
+scrolloff = 8
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
