@@ -58,3 +58,7 @@ Was one more file, /etc/X11/xenodm/Xresources
 Be very careful with that Xresources file... :D
 installed bash language server with npm
 not sure if it does anything though... doesn't seem to do much
+Rust-analyzer: https://www.skreutz.com/posts/install-rust-analyzer-on-openbsd-current/
+Well, that didn't work this time, something about pathspec not matching any file(s) known to git
+But doing git checkout 1.68.0 might have worked fine
+So just needed to grab the exact version number itself, apparently it didn't properly exclude the crap with from tarball etc etc.
