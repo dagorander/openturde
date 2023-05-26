@@ -5,6 +5,7 @@
 #       printf "Doing the thing ... "
 #          ...
 #       printf "Done\n"
+# TODO: Validate that script is running in correct location
 
 set -e
 echo "This script will exit if any command within has non-zero exit code"
@@ -13,7 +14,7 @@ echo "This script will exit if any command within has non-zero exit code"
 # This script will copy various local configurations related to OpenTurde
  
 rm -rf temp
-echo "Deleted old temp file if it existed"
+echo "Deleted old temp file structre if it existed"
 
 mkdir temp
 echo "Created base temp folder"
@@ -31,9 +32,8 @@ mkdir temp/home/config/sxhkd
 echo "Created temp home folder structure"
 
 mkdir temp/sys
-echo "TODO: Need a folder for non-home configs like:"
-echo "      login.conf, sysctl.conf"
-echo "   ...or maybe they should go separately applied in secondary script?"
+mkdir temp/sys/etc
+echo "Created temp sys folders"
 
 cp $HOME/.kshrc ./temp/home/.kshrc
 cp $HOME/.xsession ./temp/home/.xsession
@@ -43,3 +43,16 @@ cp $HOME/Documents/OpenTurde/setup_notes ./temp/home/Documents/OpenTurde/setup_n
 cp $HOME/Documents/OpenTurde/network_notes ./temp/home/Documents/OpenTurde/network_notes
 cp $HOME/Documents/OpenTurde/general_notes ./temp/home/Documents/OpenTurde/general_notes
 echo "Copied documentation"
+
+cp $HOME/.config/alacritty/alacritty.yml ./temp/home/config/alacritty/alacritty.yml
+echo "Copied alacritty config"
+cp -R $HOME/.config/helix/* ./temp/home/config/helix
+echo "Copied helix configurations"
+cp -R $HOME/.config/lvim/* ./temp/home/config/lvim
+echo "Copied lvim configurations"
+cp $HOME/.config/picom/picom.conf ./temp/home/config/picom/picom.conf
+echo "Copied picom.conf"
+cp -R $HOME/.config/ranger/* ./temp/home/config/ranger
+echo "Copied ranger configs"
+cp $HOME/.config/sxhkd/sxhkdrc ./temp/home/config/sxhkd/sxhkgrc
+echo "Copied sxhkd config"
