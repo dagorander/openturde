@@ -1,6 +1,7 @@
 #!/bin/ksh
 
 # TODO: Move actual documentation to documentation folder
+# TODO: When installscript exists, check it creates docs folder
 # TODO: migrate echo statements to printf with:
 #       printf "Doing the thing ... "
 #          ...
@@ -33,6 +34,7 @@ echo "Created temp home folder structure"
 
 mkdir temp/sys
 mkdir temp/sys/etc
+mkdir temp/sys/etc/X11/xenodm
 echo "Created temp sys folders"
 
 cp $HOME/.kshrc ./temp/home/.kshrc
@@ -56,3 +58,13 @@ cp -R $HOME/.config/ranger/* ./temp/home/config/ranger
 echo "Copied ranger configs"
 cp $HOME/.config/sxhkd/sxhkdrc ./temp/home/config/sxhkd/sxhkgrc
 echo "Copied sxhkd config"
+
+echo "Copying system configurations"
+cp /etc/installurl ./temp/sys/etc/installurl
+cp /etc/sysctl.conf ./temp/sys/etc/sysctl.conf
+cp /etc/login.conf ./temp/sys/etc/login.conf
+echo "Copied /etc-resident configs"
+cp -R /etc/X11/xenodm/* ./temp/sys/etc/X11/xenodm
+echo "Copied xenodm configs"
+
+
