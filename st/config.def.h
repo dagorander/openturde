@@ -5,11 +5,11 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Fantasque Sans Mono:pixelsize=28";
+static char *font = "Fantasque Sans Mono:pixelsize=24";
 /* Spare fonts */
 static char *font2[] = {
-	"Fantasque Sans Mono:pixelsize=28",
-	"Fantasque Sans Mono:pixelsize=28"
+	"Fantasque Sans Mono:pixelsize=24",
+	"Fantasque Sans Mono:pixelsize=24"
 };
 
 static int borderpx = 2;
@@ -118,7 +118,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.5;
+float alpha = 1;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
