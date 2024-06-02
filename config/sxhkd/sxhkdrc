@@ -27,10 +27,15 @@ XF86AudioLowerVolume
 
 #XF86MonBrightnessUp
 super + bracketright
-	xbacklight -inc 10 &
+	xbacklight -inc 2 &
 
 #XF86MonBrightnessDown
 super + bracketleft
-	xbacklight -dec 10 &
+	xbacklight -dec 2 &
 
+#####
+# SCREEN UTILS
+#
 
+# super + l
+#	slock
