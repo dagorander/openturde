@@ -9,7 +9,10 @@ mkdir home
 mkdir config
 mkdir localbin
 mkdir xenodm
+mkdir etc
 cd ..
+
+# Not deleting any files accidentally un-tracked, just in case it's a mistake.
 
 for k in .kshrc .profile .xsession
 do
@@ -35,4 +38,8 @@ do
 	cp /etc/X11/xenodm/$k xenodm/$k
 done
 
-
+for k in wsconsctl.conf rc.conf.local
+do
+	mv etc/$k backup_$randomnumber/etc/$k
+	cp /etc/$k etc/$k
+done

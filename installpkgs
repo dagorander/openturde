@@ -1,0 +1,76 @@
+#!/bin/ksh
+
+printf '\n%s\n\n' "Installing System Tools"
+# Not that I know how pkg_locate is supposed to help me right now, but it is
+# supposed to get through the issue with pkg_info -Q skipping stuff
+for k in pkglocatedb htop
+do
+	doas pkg_add $k
+done
+
+printf '\n%s\n\n' "Installing Terminals"
+for k in alacritty rxvt-unicode cool-retro-term
+do
+	doas pkg_add $k
+done
+
+printf '\n%s\n\n' "Installing Utilities"
+for k in ranger lf
+do
+	doas pkg_add $k
+done
+
+printf '\n%s\n\n' "Installing Text Editors"
+for k in helix neovim
+do
+	doas pkg_add $k
+done
+
+printf '\n%s\n\n' "Installing Desktop Environment Tools"
+for k in scrot feh screenfetch picom
+do
+	doas pkg_add $k
+done
+
+printf '\n%s\n\n' "Installing Drivers"
+for k in intel-media-driver
+do
+	doas pkg_add $k
+done
+
+printf '\n%s\n\n' "Installing Browsers"
+for k in firefox chromium
+do
+	doas pkg_add $k
+done
+
+printf '\n%s\n\n' "Installing General Development Tooling"
+for k in tree-sitter gdb
+do
+	doas pkg_add $k
+done
+
+printf '\n%s\n\n' "Installing C Tooling"
+for k in clang-tools-extra cmake
+do
+	doas pkg_add $k
+done
+
+printf '\n%s\n\n' "Installing Rust Tooling"
+for k in rust rust-analyzer rust-clippy rust-rustfmt rust-src
+do
+	doas pkg_add $k
+done
+
+printf '\n%s\n\n' "Installing Fonts"
+for k in noto-cjk noto-emoji noto-fonts fantasque-sans ubuntumono-nerd-fonts
+do
+	doas pkg_add $k
+done
+
+printf '\n%s\n\n' "Installing Games"
+for k in widelands openttd
+do
+	doas pkg_add $k
+done
+

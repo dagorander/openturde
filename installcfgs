@@ -1,0 +1,30 @@
+#!/bin/ksh
+
+# We're hyper-specifying which files we copy, to avoid mistakes.
+
+for k in .kshrc .profile .xsession
+do
+	cp home/$k ~/$k
+done
+
+for k in mystat
+do
+	cp localbin/$k ~/.local/bin/$k
+done
+
+for k in alacritty helix picom ranger
+do
+	cp -R config/$k ~/.config/$k
+done
+
+for k in Xsetup_0 Xresources
+do
+	printf '%s\n' "Will write system file /etc/X11/xenodm/$k"
+	doas cp xenodm/$k /etc/X11/xenodm/$k
+done
+
+for k in wsconsctl.conf rc.conf.local
+do
+	printf '%s\n' "Will write system file /etc/$k"
+	doas cp etc/$k /etc/$k
+done
