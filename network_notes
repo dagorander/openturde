@@ -1,5 +1,0 @@
-To take a network down:
-doas ifconfig iwx0 down
-back up:
-doas ifconfig iwx0 up
-https://www.openbsdhandbook.com/networking/

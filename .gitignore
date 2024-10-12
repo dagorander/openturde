@@ -1,10 +1,5 @@
 # 
 *.o
 temp/
+backup*
 
-# Produced executables
-dwm-6.3/dwm
-st-0.8.5/st
-dmenu-5.1/dmenu
-slock-1.5/slock
-slstatus/slstatus

@@ -1,6 +1,6 @@
 [[language]]
 name = "c"
-file-types = ["c", "h"]
+file-types = ["c","h"]
 indent = { tab-width = 8, unit = "/t" }
 
 [[language]]
@@ -8,6 +8,3 @@ name = "bash"
 shebangs = ["sh","ksh","bash"]
 indent = { tab-width = 8, unit = "/t" }
 
-[[language]]
-name = "rust"
-indent = { tab-width = 4, unit = "/t" }

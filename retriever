@@ -1,0 +1,38 @@
+#!/bin/ksh
+
+# Create a backup folder for all the old stuff
+randomnumber=$((RANDOM%999999+1))
+rm -rf backup_$randomnumber
+mkdir backup_$randomnumber
+cd backup_$randomnumber
+mkdir home
+mkdir config
+mkdir localbin
+mkdir xenodm
+cd ..
+
+for k in .kshrc .profile .xsession
+do
+	mv home/$k backup_$randomnumber/home/$k
+	cp ~/$k home/$k
+done
+
+for k in mystat
+do
+	mv localbin/$k backup_$randomnumber/localbin/$k
+	cp ~/.local/bin/$k localbin/$k
+done
+
+for k in alacritty helix picom ranger
+do
+	mv config/$k backup_$randomnumber/config/$k
+	cp -r ~/.config/$k config/$k
+done
+
+for k in Xsetup_0 Xresources
+do
+	mv xenodm/$k backup_$randomnumber/xenodm/$k
+	cp /etc/X11/xenodm/$k xenodm/$k
+done
+
+

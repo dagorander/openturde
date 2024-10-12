@@ -1,0 +1,52 @@
+#!/bin/ksh
+
+# This script probably should use awk more and such...
+# Thugh it is a hilarious storm of little program calls. :P 
+mycputemp=$(sysctl hw.sensors.cpu0.temp0 | cut -d '=' -f2 | cut -d '.' -f1)
+mybatpercent=$(apm | grep remaining | cut -d '%' -f1 | cut -d ',' -f2)
+chargeris=$(apm | grep connected | cut -d ':' -f2)
+myremainingtime=$(apm | grep minutes | cut -d ',' -f3 | cut -d ' ' -f2)
+mywifistatus=$(ifconfig iwx0 | grep status: | cut -d ':' -f2 )
+# TODO: Get and use wifi signal quality if status is 'active'
+myhomecapuse=$(df -h | grep home | tr -s ' ' | cut -d ' ' -f5)
+myhomefree=$(df -h | grep home | tr -s ' ' | cut -d ' ' -f4)
+myhomesize=$(df -h | grep home | tr -s ' ' | cut -d ' ' -f2)
+myrootcapuse=$(df -h | sed -n '2p' | tr -s ' ' | cut -d ' ' -f5)
+myrootfree=$(df -h | sed -n '2p' | tr -s ' ' | cut -d ' ' -f4)
+myrootsize=$(df -h | sed -n '2p' | tr -s ' ' | cut -d ' ' -f2)
+myusrcapuse=$(df -h | grep -v 'usr/' | grep usr | tr -s ' ' | cut -d ' ' -f5)
+myusrfree=$(df -h | grep -v 'usr/' | grep usr | tr -s ' ' | cut -d ' ' -f4)
+myusrsize=$(df -h | grep -v 'usr/' | grep usr | tr -s ' ' | cut -d ' ' -f2)
+myusrlocalcapuse=$(df -h | grep usr/local | tr -s ' ' | cut -d ' ' -f5)
+myusrlocalfree=$(df -h | grep usr/local | tr -s ' ' | cut -d ' ' -f4)
+myusrlocalsize=$(df -h | grep usr/local | tr -s ' ' | cut -d ' ' -f2)
+
+mytotalmem=$(($(sysctl -n hw.physmem) / 1024 / 1024))
+myusedmem=$(vmstat | awk '!/[a-z]/{gsub("M",""); print $3}')
+mymemuseratio=$(( $myusedmem / $(($mytotalmem / 100)) ))
+
+printf '%s\n' "$(date)"
+printf '%s\n' "CPU temp       $mycputemp C"
+printf '%s' "Battery level $mybatpercent %"
+
+# TODO: Create a case for if battery level is 100% to silence silly time-to-full
+if [ " connected" = "$chargeris" ]; then
+	printf '%s\n' " (~$myremainingtime minutes to full)"
+elif [ " not connected" = "$chargeris" ]; then
+	printf '%s\n' " (~$myremainingtime minutes to empty)"
+fi
+
+if [ " active" = "$mywifistatus" ]; then
+	myip=$(ifconfig iwx0 | grep inet | tr -s ' ' | cut -d ' ' -f2)
+	printf '%s\n' "WiFi          $mywifistatus, IP $myip"
+else
+	printf '%s\n' "WiFi          $mywifistatus"
+fi
+
+printf '%s\n' "RAM            $mymemuseratio% used ($myusedmem MiB / $mytotalmem MiB)"
+printf '%s\n' "/              $myrootcapuse used ($myrootfree / $myrootsize free)"
+printf '%s\n' "/home          $myhomecapuse used ($myhomefree / $myhomesize free)"
+printf '%s\n' "/usr           $myusrcapuse used ($myusrfree / $myusrsize free)"
+printf '%s\n' "/usr/local     $myusrlocalcapuse used ($myusrlocalfree / $myusrlocalsize free)"
+
+

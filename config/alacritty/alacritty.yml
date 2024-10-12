@@ -34,19 +34,23 @@ colors:
 # My own stuffs
 window:
   dynamic_padding: true
-  opacity: 0.85
+  opacity: 0.9
   padding:
     x: 4 
     y: 4 
 
 font:
   normal:
-    family: FantasqueSansMono
+    # family: UbuntuMono Nerd Font Mono
+    family: Fantasque Sans Mono
   bold:
-    family: FantasqueSansMono
+    # family: UbuntuMono Nerd Font Mono
+    family: Fantasque Sans Mono
   italic:
-    family: FantasqueSansMono
+    # family: UbuntuMono Nerd Font Mono
+    family: Fantasque Sans Mono
   bold_italic:
-    family: FantasqueSansMono
-  size: 10
+    # family: UbuntuMono Nerd Font Mono
+    family: Fantasque Sans Mono
+  size: 8
 
