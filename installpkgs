@@ -27,7 +27,7 @@ do
 done
 
 printf '\n%s\n\n' "Installing Desktop Environment Tools"
-for k in scrot feh screenfetch picom
+for k in scrot feh screenfetch picom xdotool
 do
 	doas pkg_add $k
 done

@@ -8,3 +8,15 @@ tar -xzvf $FILENAME
 PATCHING SOURCE
 patch -p1 < name-of-diff
 Then if things go wrong, manually apply the *.rej.*
+
+SCRIPTING X11/CWM
+xdotools (from packages) can probably do this
+      see: https://www.semicomplete.com/projects/xdotool/
+
+ksh array example:
+      set -A myarray "a" "b" "c"
+
+      for i in "${myarray[@]}"
+      do
+            echo $i
+      done
