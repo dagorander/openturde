@@ -14,7 +14,7 @@ done
 
 for k in alacritty helix picom ranger
 do
-	cp -R config/$k ~/.config/$k
+	cp -R config/$k ~/.config/
 done
 
 for k in Xsetup_0 Xresources
