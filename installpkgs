@@ -1,76 +1,32 @@
 #!/bin/ksh
 
-printf '\n%s\n\n' "Installing System Tools"
-# Not that I know how pkg_locate is supposed to help me right now, but it is
-# supposed to get through the issue with pkg_info -Q skipping stuff
-for k in pkglocatedb htop
-do
-	doas pkg_add $k
-done
+# pkglocatedb is intended to be a more complete pkg_info
+install_system_tools="pkglocatedb htop"
+install_terminals="alacritty rxvt-unicode--everything cool-retro-term"
+install_utilities="ranger lf"
+install_text_editors="helix neovim"
+# xdotool can be used to issue commands to X, to automate CWM?
+install_de_tools="scrot feh screenfetch picom xdotool"
+install_drivers="intel-media-driver"
+install_browsers="firefox chromium"
+install_dev_tooling="tree-sitter gdb git"
+install_c_tools="clang-tools-extra cmake"
+install_rust_tools="rust rust-analyzer rust-clippy rust-rustfmt rust-src"
+install_fonts="noto-cjk noto-emoji noto-fonts fantasque-sans ubuntumono-nerd-fonts"
+install_games="widelands openttd"
+install_media_players="vlc"
 
-printf '\n%s\n\n' "Installing Terminals"
-for k in alacritty rxvt-unicode cool-retro-term
-do
-	doas pkg_add $k
-done
-
-printf '\n%s\n\n' "Installing Utilities"
-for k in ranger lf
-do
-	doas pkg_add $k
-done
-
-printf '\n%s\n\n' "Installing Text Editors"
-for k in helix neovim
-do
-	doas pkg_add $k
-done
-
-printf '\n%s\n\n' "Installing Desktop Environment Tools"
-for k in scrot feh screenfetch picom xdotool
-do
-	doas pkg_add $k
-done
-
-printf '\n%s\n\n' "Installing Drivers"
-for k in intel-media-driver
-do
-	doas pkg_add $k
-done
-
-printf '\n%s\n\n' "Installing Browsers"
-for k in firefox chromium
-do
-	doas pkg_add $k
-done
-
-printf '\n%s\n\n' "Installing General Development Tooling"
-for k in tree-sitter gdb
-do
-	doas pkg_add $k
-done
-
-printf '\n%s\n\n' "Installing C Tooling"
-for k in clang-tools-extra cmake
-do
-	doas pkg_add $k
-done
-
-printf '\n%s\n\n' "Installing Rust Tooling"
-for k in rust rust-analyzer rust-clippy rust-rustfmt rust-src
-do
-	doas pkg_add $k
-done
-
-printf '\n%s\n\n' "Installing Fonts"
-for k in noto-cjk noto-emoji noto-fonts fantasque-sans ubuntumono-nerd-fonts
-do
-	doas pkg_add $k
-done
-
-printf '\n%s\n\n' "Installing Games"
-for k in widelands openttd
-do
-	doas pkg_add $k
-done
-
+doas pkg_add \
+$install_system_tools \
+$install_terminals \
+$install_utilities \
+$install_text_editors \
+$install_de_tools \
+$install_drivers \
+$install_browsers \
+$install_dev_tooling \
+$install_c_tools \
+$install_rust_tools \
+$install_fonts \
+$install_games \
+$install_media_players 

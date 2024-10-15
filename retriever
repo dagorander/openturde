@@ -14,7 +14,7 @@ cd ..
 
 # Not deleting any files accidentally un-tracked, just in case it's a mistake.
 
-for k in .kshrc .profile .xsession
+for k in .kshrc .profile .xsession .cwmrc
 do
 	mv home/$k backup_$randomnumber/home/$k
 	cp ~/$k home/$k
