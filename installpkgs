@@ -3,7 +3,7 @@
 # pkglocatedb is intended to be a more complete pkg_info
 install_system_tools="pkglocatedb htop"
 install_terminals="alacritty rxvt-unicode--everything cool-retro-term"
-install_utilities="ranger lf"
+install_utilities="ranger lf pcmanfm"
 install_text_editors="helix neovim"
 # xdotool can be used to issue commands to X, to automate CWM?
 install_de_tools="scrot feh screenfetch picom xdotool"
