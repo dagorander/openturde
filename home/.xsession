@@ -12,5 +12,6 @@ export MOZ_ACCELERATED=1 MOZ_WEBRENDER=1
 picom &
 #feh --bg-fill ~/Pictures/Wallpapers/3by2/cityscape-synthwave-2-3840??2160.jpg &
 feh --bg-fill ~/Pictures/Wallpapers/blackhole.jpg &
+xrdb -merge ~/.Xresources
 #dwm
 cwm

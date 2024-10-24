@@ -10,11 +10,12 @@ mkdir config
 mkdir localbin
 mkdir xenodm
 mkdir etc
+mkdir wallpapers
 cd ..
 
 # Not deleting any files accidentally un-tracked, just in case it's a mistake.
 
-for k in .kshrc .profile .xsession .cwmrc
+for k in .kshrc .profile .xsession .cwmrc .Xresources
 do
 	mv home/$k backup_$randomnumber/home/$k
 	cp ~/$k home/$k
@@ -43,3 +44,6 @@ do
 	mv etc/$k backup_$randomnumber/etc/$k
 	cp /etc/$k etc/$k
 done
+
+mv wallpapers/* backup_$randomnumber/wallpapers/
+cp -r ~/Pictures/Wallpapers ./wallpapers
