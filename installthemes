@@ -4,3 +4,13 @@ for k in Nordic-darker Nordic-darker-v40
 do
 	doas cp -r ./themes/$k /usr/local/share/themes/$k
 done
+
+mv -f ~/Pictures/Wallpapers ~/Pictures/Wallpapers_bak
+cp -r ./wallpapers/* ~/Pictures/Wallpapers
+if [ $? -eq 0 ]
+then
+	rm -rf ~/Pictures/Wallpapers_bak
+else
+	mv -f ~/Pictures/Wallpapers_bak ~/Pictures/
+	echo "Copying Wallpapers Failes"
+fi
