@@ -1,0 +1,6 @@
+#!/bin/ksh
+
+for k in Nordic-darker Nordic-darker-v40
+do
+	doas cp -r ./themes/$k /usr/local/share/themes/$k
+done

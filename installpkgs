@@ -3,10 +3,10 @@
 # pkglocatedb is intended to be a more complete pkg_info
 install_system_tools="pkglocatedb htop"
 install_terminals="alacritty rxvt-unicode--everything cool-retro-term"
-install_utilities="ranger lf pcmanfm"
+install_utilities="ranger lf pcmanfm xarchiver deluge"
 install_text_editors="helix neovim"
 # xdotool can be used to issue commands to X, to automate CWM?
-install_de_tools="scrot feh screenfetch picom xdotool"
+install_de_tools="scrot feh screenfetch picom xdotool lxappearance"
 install_drivers="intel-media-driver"
 install_browsers="firefox chromium"
 install_dev_tooling="tree-sitter gdb git"
@@ -22,6 +22,7 @@ $install_terminals \
 $install_utilities \
 $install_text_editors \
 $install_de_tools \
+$install_themes \
 $install_drivers \
 $install_browsers \
 $install_dev_tooling \

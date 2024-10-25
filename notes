@@ -20,3 +20,7 @@ ksh array example:
       do
             echo $i
       done
+
+Add the themes and copy-commands to a script
+destination for themes is: /usr/local/share/themes/
+Also figure out how to set correct DPI in Xresources for sane sizes of browsers and such.

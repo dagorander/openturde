@@ -1,11 +1,12 @@
 
 
-make get:
+get:
 	./retriever
 
-make install:
+install:
 	./installcfgs
 	./installpkgs
+	./installthemes
 
 clean:
 	rm -rf backup*
