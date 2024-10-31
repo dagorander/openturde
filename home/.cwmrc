@@ -6,7 +6,7 @@ unbind-key				all
 
 fontname				"spleen:pixelsize=32"
 
-borderwidth				2
+borderwidth				4
 color activeborder		"#5294E2"
 color inactiveborder	"#565656"
 color urgencyborder		"#cc241d"
