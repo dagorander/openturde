@@ -1,0 +1,22 @@
+#!/bin/ksh
+
+mystat
+
+# TODO: Here we could use xdotools to move this window to the center?
+# TODO: Turn off echoing of input
+echo "[S]hutdown     [R]eboot     [C]ancel"
+
+# TODO: Figure out how to read only one character and act without an Enter key
+read input
+
+case $input in
+	S|s|Shutdown|shutdown)
+		shutdown -p now
+		;;
+	R|r|Reboot|reboot)
+		shutdown -r now
+		;;
+	*)
+		echo "Nyet"
+		;;
+esac

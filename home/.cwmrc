@@ -4,6 +4,10 @@ sticky					yes
 
 unbind-key				all
 
+command					firefox
+command					pcmanfm
+command					alacritty
+
 fontname				"spleen:pixelsize=32"
 
 borderwidth				4
@@ -33,6 +37,7 @@ bind-key 4S-r			restart
 bind-key 4-p			"scrot '%Y-%m-%d_%H:%M_$wx$h.png' -e 'mv $f ~/Pictures/Screenshots/$f'"
 bind-key 4S-p			"scrot -s '%Y-%m-%d_%H:%M_$wx$h.png' -e 'mv $f ~/Pictures/Screenshots/$f'"
 
+bind-key CM-Delete      "alacritty -e powertool"
 
 bind-key 4-t			window-htile
 bind-key 4S-t			window-vtile
@@ -40,7 +45,7 @@ bind-key 4-f			window-fullscreen
 bind-key 4-m			window-maximize
 
 bind-key 4-c			window-close
-bind-key 4-u			windo-hide
+bind-key 4-u			window-hide
 
 # Toggle visibility of group n, hiding all other groups
 bind-key 4-1    group-only-1

@@ -7,7 +7,7 @@ do
 	cp home/$k ~/$k
 done
 
-for k in mystat
+for k in mystat powertool
 do
 	cp localbin/$k ~/.local/bin/$k
 done

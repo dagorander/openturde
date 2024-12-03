@@ -21,7 +21,7 @@ do
 	cp ~/$k home/$k
 done
 
-for k in mystat
+for k in mystat powertool
 do
 	mv localbin/$k backup_$randomnumber/localbin/$k
 	cp ~/.local/bin/$k localbin/$k
