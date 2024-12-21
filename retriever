@@ -39,7 +39,7 @@ do
 	cp /etc/X11/xenodm/$k xenodm/$k
 done
 
-for k in wsconsctl.conf rc.conf.local
+for k in wsconsctl.conf rc.conf.local xorg.conf
 do
 	mv etc/$k backup_$randomnumber/etc/$k
 	cp /etc/$k etc/$k

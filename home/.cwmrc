@@ -8,6 +8,7 @@ command Browser			firefox
 command	Firefox 		firefox
 command Chromium		chrome
 command	Files 			pcmanfm
+command PCmanfm			pcmanfm
 command Terminal		alacritty
 command	Alacritty 		alacritty
 command Settlers		widelands
@@ -19,6 +20,7 @@ command OpenTTD			openttd
 command VLC				vlc
 command Cool-Retro-Term	cool-retro-term
 command CRT 			cool-retro-term
+command Gimp			gimp
 
 # fontname				"spleen:pixelsize=32"
 fontname				"Fantasque Sans Mono:pixelsize=42"

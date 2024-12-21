@@ -1,4 +1,11 @@
 #!/usr/bin/env bash
+
+# Powertools for OpenTurde
+# Depends on bash because I want to be able to do
+#	read -n 1 input
+
+
+
 clear
 # TODO: Replace mystat with an internal set of functions
 # mystat
@@ -26,8 +33,9 @@ selection=0
 
 take_input () {
 	stty -echo
-	read input
-	$selection=$input
+	read -n 1 input
+	selection=$input
+	echo $input
 	echo $selection
 	stty echo
 }
@@ -37,7 +45,7 @@ update_page () {
 		echo "effeffeff"
 	fi
 	if [ $selection == 'q' ]; then
-		$quit=1
+		quit=1
 	fi
 }
 
@@ -49,7 +57,9 @@ debug_output () {
 }
 
 while [ $quit -ne 1 ]; do
-	time_to_die
+	take_input
+	update_page
+	debug_output
 done
 
 exit $error_code
