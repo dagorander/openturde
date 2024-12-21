@@ -4,6 +4,7 @@
 install_system_tools="pkglocatedb htop"
 install_terminals="alacritty rxvt-unicode--everything cool-retro-term"
 install_utilities="ranger lf pcmanfm xarchiver deluge"
+install_shells="bash"
 install_text_editors="helix neovim"
 # xdotool can be used to issue commands to X, to automate CWM?
 install_de_tools="scrot feh screenfetch picom xdotool lxappearance"
@@ -20,6 +21,7 @@ doas pkg_add \
 $install_system_tools \
 $install_terminals \
 $install_utilities \
+$install_shells \
 $install_text_editors \
 $install_de_tools \
 $install_themes \

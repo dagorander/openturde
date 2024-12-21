@@ -10,6 +10,13 @@ command Chromium		chrome
 command	Files 			pcmanfm
 command Terminal		alacritty
 command	Alacritty 		alacritty
+command Settlers		widelands
+command Widelands		widelands
+command Deluge			deluge
+command Torrent			deluge
+command TransportTycoon	openttd
+command OpenTTD			openttd
+command VLC				vlc
 command Cool-Retro-Term	cool-retro-term
 command CRT 			cool-retro-term
 
