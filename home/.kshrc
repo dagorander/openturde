@@ -4,4 +4,6 @@ export PATH="$HOME/.local/bin:$PATH"
 export RUST_SRC_PATH="$HOME/.cache/rust-src/library"
 export PS1
 
+set +o vi
+
 alias vim=nvim

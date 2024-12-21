@@ -1,22 +1,56 @@
+#####  !/usr/bin/env bash
 #!/bin/ksh
+clear
+# TODO: Replace mystat with an internal set of functions
+# mystat
+time_to_die () {
+	# TODO: Here we could use xdotools to move this window to the center?
+	# TODO: Turn off echoing of input
+	# TODO: Figure out how to read only one character and act without an Enter key
+	echo "[S]hutdown     [R]eboot     [C]ancel"
+	read input
+	case $input in
+		S|s|Shutdown|shutdown)
+			shutdown -p now
+			;;
+		R|r|Reboot|reboot)
+			shutdown -r now
+			;;
+		*)
+			;;
+	esac
+}
 
-mystat
+quit=0
+error_code=0
+selection=0
 
-# TODO: Here we could use xdotools to move this window to the center?
-# TODO: Turn off echoing of input
-echo "[S]hutdown     [R]eboot     [C]ancel"
+take_input () {
+	stty -echo
+	read input
+	$selection=$input
+	echo $selection
+	stty echo
+}
 
-# TODO: Figure out how to read only one character and act without an Enter key
-read input
+update_page () {
+	if [ $selection == 'f' ]; then
+		echo "effeffeff"
+	fi
+	if [ $selection == 'q' ]; then
+		$quit=1
+	fi
+}
 
-case $input in
-	S|s|Shutdown|shutdown)
-		shutdown -p now
-		;;
-	R|r|Reboot|reboot)
-		shutdown -r now
-		;;
-	*)
-		echo "Nyet"
-		;;
-esac
+debug_output () {
+	echo "quit:       $quit"
+	echo "error_code: $error_code"
+	echo "selection:  $selection"
+	echo "input:      $input"
+}
+
+while [ $quit -ne 1 ]; do
+	time_to_die
+done
+
+exit $error_code

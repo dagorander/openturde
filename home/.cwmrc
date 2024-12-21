@@ -4,11 +4,17 @@ sticky					yes
 
 unbind-key				all
 
-command					firefox
-command					pcmanfm
-command					alacritty
+command Browser			firefox
+command	Firefox 		firefox
+command Chromium		chrome
+command	Files 			pcmanfm
+command Terminal		alacritty
+command	Alacritty 		alacritty
+command Cool-Retro-Term	cool-retro-term
+command CRT 			cool-retro-term
 
-fontname				"spleen:pixelsize=32"
+# fontname				"spleen:pixelsize=32"
+fontname				"Fantasque Sans Mono:pixelsize=42"
 
 borderwidth				4
 color activeborder		"#5294E2"
