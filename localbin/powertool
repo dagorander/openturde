@@ -4,17 +4,24 @@
 # Depends on bash because I want to be able to do
 #	read -n 1 input
 
+# TODO: See if I can make "command mystat alacritty exec powertool" in .cwmrc
 
 
-clear
+
+
+
+
+
+
+
+
 # TODO: Replace mystat with an internal set of functions
 # mystat
 time_to_die () {
 	# TODO: Here we could use xdotools to move this window to the center?
-	# TODO: Turn off echoing of input
 	# TODO: Figure out how to read only one character and act without an Enter key
 	echo "[S]hutdown     [R]eboot     [C]ancel"
-	read input
+	read -n 1 input
 	case $input in
 		S|s|Shutdown|shutdown)
 			shutdown -p now
@@ -29,22 +36,19 @@ time_to_die () {
 
 quit=0
 error_code=0
-selection=0
 
 take_input () {
 	stty -echo
 	read -n 1 input
-	selection=$input
-	echo $input
-	echo $selection
 	stty echo
 }
 
 update_page () {
-	if [ $selection == 'f' ]; then
+	# should use case... :P
+	if [ $input == 'f' ]; then
 		echo "effeffeff"
 	fi
-	if [ $selection == 'q' ]; then
+	if [ $input == 'q' ]; then
 		quit=1
 	fi
 }
@@ -52,14 +56,34 @@ update_page () {
 debug_output () {
 	echo "quit:       $quit"
 	echo "error_code: $error_code"
-	echo "selection:  $selection"
 	echo "input:      $input"
 }
 
+###
+#	START EXECUTION
+###
+
+# TODO: Test this:
+# read -t 1 -n 1 && dosomething
+# or maybe
+# read -t 1 -n 1 input && echo input
+
+# TODO: When using df to gather data, use df -P and calc from Blocks
+
+# TODO: So this way we can grab input or, if none, just update or whatever
+testfunction () {
+	read -t 1 -n 1 input
+	if [ "$input" == 'q' ]; then
+		exit $error_code
+	fi
+	cputemp=$(sysctl hw.sensors.cpu0.temp0 | cut -d '=' -f2 | cut -d '.' -f1)
+	echo $cputemp
+}
+
+clear
+
 while [ $quit -ne 1 ]; do
-	take_input
-	update_page
-	debug_output
+	testfunction
 done
 
 exit $error_code
