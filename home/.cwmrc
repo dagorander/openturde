@@ -21,6 +21,7 @@ command VLC				vlc
 command Cool-Retro-Term	cool-retro-term
 command CRT 			cool-retro-term
 command Gimp			gimp
+command Shutdown		"shutdown -p now"
 
 # fontname				"spleen:pixelsize=32"
 fontname				"Fantasque Sans Mono:pixelsize=42"
