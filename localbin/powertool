@@ -6,62 +6,12 @@
 
 # TODO: See if I can make "command mystat alacritty exec powertool" in .cwmrc
 
-
-
-
-
-
-
-
-
-
-# TODO: Replace mystat with an internal set of functions
-# mystat
-time_to_die () {
-	# TODO: Here we could use xdotools to move this window to the center?
-	# TODO: Figure out how to read only one character and act without an Enter key
-	echo "[S]hutdown     [R]eboot     [C]ancel"
-	read -n 1 input
-	case $input in
-		S|s|Shutdown|shutdown)
-			shutdown -p now
-			;;
-		R|r|Reboot|reboot)
-			shutdown -r now
-			;;
-		*)
-			;;
-	esac
-}
+###
+#	GENERAL VARIABLE INITIALISATION
+###
 
 quit=0
-error_code=0
-
-take_input () {
-	stty -echo
-	read -n 1 input
-	stty echo
-}
-
-update_page () {
-	# should use case... :P
-	if [ $input == 'f' ]; then
-		echo "effeffeff"
-	fi
-	if [ $input == 'q' ]; then
-		quit=1
-	fi
-}
-
-debug_output () {
-	echo "quit:       $quit"
-	echo "error_code: $error_code"
-	echo "input:      $input"
-}
-
-###
-#	START EXECUTION
-###
+screen=0
 
 # TODO: Test this:
 # read -t 1 -n 1 && dosomething
@@ -80,10 +30,37 @@ testfunction () {
 	echo $cputemp
 }
 
+###
+#	SCREENS
+###
+
+#	A stats screen - basically the stuff in mystat
+#	Screen screen - control brightness, backgrounds(?) etc
+#	Network screen - detailed stats, up/down, search, connect etc
+#	Packages screen - count, update, search, search installed, etc
+#	Config screen - update, refresh, copy to openturde, etc
+#			(eg. quickly access openturde tracked files)
+#	Shutdown/reboot screen
+
+###
+#	MAIN LOOP
+###
+
+main_loop () {
+	while [ "$quit" -ne 1 ]
+	do
+		echo "Testing Testing"
+	done
+}
+
+###
+#	START EXECUTION
+###
+
 clear
+stty -echo
 
-while [ $quit -ne 1 ]; do
-	testfunction
-done
+main_loop
 
+stty echo
 exit $error_code
