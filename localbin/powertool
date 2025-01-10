@@ -31,10 +31,32 @@ testfunction () {
 }
 
 ###
-#	SCREENS
+#	DATA RETRIEVAL ROUTINES
+###
+
+read_sysstats () {
+	df_full=$(df -P)
+	
+	myhome=$(echo "$df_full" | grep home)
+
+	mycapuse=$(echo "$myhome" | tr -s ' ' | cut -d ' ' -f5)
+	myfree=$(echo "$myhome" | tr -s ' ' | cut -d ' ' -f4)
+	mysize=$(echo "$myhome" | tr -s ' ' | cut -d ' ' -f2)
+	echo "$mycapuse $myfree $mysize"
+	echo "$myhome"
+	echo "$df_full"
+}
+
+###
+#	SCREEN CONTROL ROUTINES
 ###
 
 #	A stats screen - basically the stuff in mystat
+
+sysstat_screen () {
+	read_sysstats
+}
+
 #	Screen screen - control brightness, backgrounds(?) etc
 #	Network screen - detailed stats, up/down, search, connect etc
 #	Packages screen - count, update, search, search installed, etc
@@ -49,8 +71,13 @@ testfunction () {
 main_loop () {
 	while [ "$quit" -ne 1 ]
 	do
-		echo "Testing Testing"
+		sysstat_screen
+		read -t 1 -n 1 input
+		if [ "$input" == "q" ]; then
+			exit 0
+		fi
 	done
+	# UNREACHABLE
 }
 
 ###
